@@ -34,6 +34,19 @@ Therefore, the default directory structure should be: </br>
 For this project, we also created a C/C++ dataset, following the recommendations by Haque et. al. (https://arxiv.org/abs/2004.04881) and LeClair et. al. (https://arxiv.org/abs/1902.01954) which can also be extracted in a similar directory structure as before.
 
 If you choose to have a different directory structure, please make the necessary changes in myutils.py, predict.py and train.py.
+
+### Step 3: Train a Model
+
+```console
+you@server:~/dev/attn-to-fc$ time python3 train.py --model-type=ast-attendgru-fc --datfile=datfile.pkl --fwfile=javafirstwords_10.pkl--gpu=0
+```
+
+### Step 4: Predict Output
+
+```console
+you@server:~/dev/attn-to-fc$ time python3 predict.py /nfs/projects/firstwords/data/outdir/models/ast-attendgru-fc_E02_1589046987.h5 --fwfile=javafirstwords_10.pkl --gpu=0
+```
+
 <!--
 **actionwords/actionwords** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 -->
