@@ -38,13 +38,13 @@ If you choose to have a different directory structure, please make the necessary
 ### Step 3: Train a Model
 
 ```console
-you@server:~/dev/attn-to-fc$ time python3 train.py --model-type=ast-attendgru-fc --datfile=datfile.pkl --fwfile=javafirstwords_10.pkl--gpu=0
+you@server:~/dev/firstwords$ time python3 train.py --model-type=ast-attendgru-fc --datfile=datfile.pkl --fwfile=javafirstwords_10.pkl--gpu=0
 ```
 
 ### Step 4: Predict Output
 
 ```console
-you@server:~/dev/attn-to-fc$ time python3 predict.py /nfs/projects/firstwords/data/outdir/models/ast-attendgru-fc_E02_1589046987.h5 --fwfile=javafirstwords_10.pkl --gpu=0
+you@server:~/dev/firstwords$ time python3 predict.py /nfs/projects/firstwords/data/outdir/models/ast-attendgru-fc_E02_1589046987.h5 --fwfile=javafirstwords_10.pkl --gpu=0
 ```
 
 <!--
