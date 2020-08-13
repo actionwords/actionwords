@@ -1,4 +1,7 @@
-### Action Word Prediction
+### Action Word Prediction for Neural Source Code summarization
+This repository contains the code for action word prediction, a tool used for predicting only the action words of a subroutine comment. This project is aimed to demonstrate the importance of action words and how incorrect prediction of action words leads to poorer source code summary prediction overall.
+
+
 
 <!--
 **actionwords/actionwords** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
