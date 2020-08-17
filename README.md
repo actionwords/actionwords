@@ -44,7 +44,7 @@ you@server:~/dev/firstwords$ time python3 train.py --model-type=ast-attendgru-fc
 ### Step 4: Predict Output
 
 ```console
-you@server:~/dev/firstwords$ time python3 predict.py /nfs/projects/firstwords/data/outdir/models/ast-attendgru-fc_E02_1589046987.h5 --fwfile=javafirstwords_10.pkl --gpu=0
+you@server:~/dev/firstwords$ time python3 predict.py /nfs/projects/firstwords/data/outdir/models/ast-attendgru-fc_E02_1589046987.h5 --fwfile=javafirstwords_10.pkl --gpu=0 --data=/nfs/projects/firstwords/data/standard --outdir=/nfs/projects/funcom/data/outdir --datfile=3fulldataset.pkl
 ```
 
 <!--
