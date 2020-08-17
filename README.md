@@ -41,6 +41,8 @@ If you choose to have a different directory structure, please make the necessary
 you@server:~/dev/firstwords$ time python3 train.py --batch-size=1000 --epochs=10 --model-type=ast-attendgru-fc --data=/nfs/projects/firstwords/data/standard --outdir=/nfs/projects/firstwords/data/outdir --datfile=ccpp1m_dataset.pkl --fwfile=javafirstwords_10.pkl--gpu=0
 ```
 
+Model types are defined in model.py. All the models implementations are our faithful implementations of the original papers. We thank Haque et. al. for making their implementation public at https://github.com/Attn-to-FC/Attn-to-FC and we made the necessary changes to the model and batch generators to make the models train and predict on the first word of the comment.
+
 ### Step 4: Predict Output
 
 ```console
