@@ -1,12 +1,12 @@
 # Action Word Prediction for Neural Source Code summarization
 This repository contains the code for action word prediction, a tool used for predicting only the action words of a subroutine comment. This project is aimed to demonstrate the importance of action words and how incorrect prediction of action words leads to poorer source code summary prediction overall.
 
-## Usage
-
-### Step1: Dependencies
+## Dependencies
 We assume Ubuntu 18.04, Python 3.6.7, Keras 2.2.4, numpy 1.16.2, Tensorflow-gpu 1.14, javalang 0.12.0, nltk 3.4.
 
-### Step 2: Obtain Dataset
+## Action Word Prediction
+
+### Step 1: Obtain Dataset
 We use the dataset of 2.1m Java methods and method comments, already cleaned and separated into train/val/test sets by LeClair et al.
 
 (Their raw data was downloaded from: http://leclair.tech/data/funcom/)  
@@ -35,7 +35,7 @@ For this project, we also created a C/C++ dataset, following the recommendations
 
 If you choose to have a different directory structure, please make the necessary changes in myutils.py, predict.py and train.py.
 
-### Step 3: Train a Model
+### Step 2: Train a Model
 
 ```console
 you@server:~/dev/firstwords$ time python3 train.py --batch-size=1000 --epochs=10 --model-type=ast-attendgru-fc --data=/nfs/projects/firstwords/data/standard --outdir=/nfs/projects/firstwords/data/outdir --datfile=ccpp1m_dataset.pkl --fwfile=javafirstwords_10.pkl--gpu=0
@@ -49,7 +49,7 @@ you@server:~/dev/firstwords$ time python3 train.py --help
 
 This will output the list of input arguments that can be passed via the command line to figure out what information needs to be included to run the train.py file.
 
-### Step 4: Predict Output
+### Step 3: Predict Output
 
 ```console
 you@server:~/dev/firstwords$ time python3 predict.py /nfs/projects/firstwords/data/outdir/models/ast-attendgru-fc_E02_1589046987.h5 --fwfile=javafirstwords_10.pkl --gpu=0 --data=/nfs/projects/firstwords/data/standard --outdir=/nfs/projects/funcom/data/outdir --datfile=ccpp1m_dataset.pkl
