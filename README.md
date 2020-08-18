@@ -43,11 +43,30 @@ you@server:~/dev/firstwords$ time python3 train.py --batch-size=1000 --epochs=10
 
 Model types are defined in model.py. All the models implementations are our faithful implementations of the original papers. We thank Haque et. al. for making their implementation public at https://github.com/Attn-to-FC/Attn-to-FC and we made the necessary changes to the model and batch generators to make the models train and predict on the first word of the comment.
 
+```console
+you@server:~/dev/firstwords$ time python3 train.py --help
+```
+
+This will output the list of input arguments that can be passed via the command line to figure out what information needs to be included to run the train.py file.
+
 ### Step 4: Predict Output
 
 ```console
 you@server:~/dev/firstwords$ time python3 predict.py /nfs/projects/firstwords/data/outdir/models/ast-attendgru-fc_E02_1589046987.h5 --fwfile=javafirstwords_10.pkl --gpu=0 --data=/nfs/projects/firstwords/data/standard --outdir=/nfs/projects/funcom/data/outdir --datfile=ccpp1m_dataset.pkl
 ```
+The above command was used to predict the first words for the test set for the top 10 most commonly occuring action words along with other.
+
+```console
+you@server:~/dev/firstwords$ time python3 predict.py /path/to/model/file --help
+```
+
+This will output thr list of input arguments that can be passed via the command line to figure out what information needs to be included to run the predict.py file
+
+Note that all these models use CuDNNGRU instead of standard GRU, so a GPU is necessary during both training and prediction for the models.
+
+## Full Sentence Comment Prediction
+
+The paper accompanying this repository also includes experiments to predict full sentence comments. The code for this experiment was run on the models graciously made available online by Haque et. al. at https://github.com/Attn-to-FC/Attn-to-FC. However, we edited their bleu score script to calculate the bleu score based on our project requirements.
 
 <!--
 **actionwords/actionwords** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
