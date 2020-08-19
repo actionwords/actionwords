@@ -33,6 +33,8 @@ Therefore, the default directory structure should be: </br>
 
 For this project, we also created a C/C++ dataset, following the recommendations by Haque et. al. (https://arxiv.org/abs/2004.04881) and LeClair et. al. (https://arxiv.org/abs/1902.01954) which can also be extracted in a similar directory structure as before.
 
+https://ccppdataset1m-nodupes.s3.us-east-2.amazonaws.com/ccppdata.zip
+
 If you choose to have a different directory structure, please make the necessary changes in myutils.py, predict.py and train.py.
 
 ### Step 2: Train a Model
