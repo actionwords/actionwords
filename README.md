@@ -70,6 +70,10 @@ Note that all these models use CuDNNGRU instead of standard GRU, so a GPU is nec
 
 The paper accompanying this repository also includes experiments to predict full sentence comments. The code for this experiment was run on the models graciously made available online by Haque et. al. at https://github.com/Attn-to-FC/Attn-to-FC. However, we edited their bleu score script to calculate the bleu score based on our project requirements.
 
+## Author information
+
+To learn more about the author, visit https://sakibhaque.github.io/ If you have any questions or concerns, please do not hesitate to reach out the authors via the following email: actionwords.saner2021@gmail.com, shaque@nd.edu
+
 <!--
 **actionwords/actionwords** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 -->
